@@ -1,3 +1,3 @@
 # Jump
-[Script](Assets/Scripts)
+[Script](Assets/Scripts/Launch.cs)
 ![](cubeJump.gif)
