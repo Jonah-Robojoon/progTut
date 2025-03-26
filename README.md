@@ -4,5 +4,9 @@
 
 
 # Dance
-[Script](Assets/Scripts/playerControler.cs)
+[Script](Assets/Scripts/playerAnim.cs)
 ![](dance.gif)
+
+# Walk
+[Script](Assets/Scripts/MoveBasic.cs)
+![](walkGif.gif)
