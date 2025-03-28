@@ -10,3 +10,8 @@
 # Walk
 [Script](Assets/Scripts/MoveBasic.cs)
 ![](walkGif.gif)
+
+
+# Walk and Jump
+[Script](Assets/Scripts/cubePlayerMovement.cs)
+![](jumpAndWalkNew.gif)
