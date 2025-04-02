@@ -15,3 +15,9 @@
 # Walk and Jump
 [Script](Assets/Scripts/cubePlayerMovement.cs)
 ![](jumpAndWalkNew.gif)
+
+
+# Coin Systen
+[Pickup Script](Assets/Scripts/pickup.cs)
+[KeepScore Script](Assets/Scripts/ckeepScore.cs)
+![](coinSystem.gif)
