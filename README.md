@@ -21,3 +21,9 @@
 [Pickup Script](Assets/Scripts/pickup.cs)
 [KeepScore Script](Assets/Scripts/ckeepScore.cs)
 ![](coinSystem.gif)
+
+# Coin Systen
+[Shoot Script](Assets/Scripts/Shoot.cs)
+[Kill on hit Script](Assets/Scripts/killOnHit.cs)
+[Move bullet Script](Assets/Scripts/moveBullet.cs)
+![](kaboom.gif)
