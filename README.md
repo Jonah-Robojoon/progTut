@@ -27,3 +27,9 @@
 [Kill on hit Script](Assets/Scripts/killOnHit.cs)
 [Move bullet Script](Assets/Scripts/moveBullet.cs)
 ![](kaboom.gif)
+
+# emeny AI
+[Shoot Script](Assets/Scripts/EnemyShootingBehaviou.cs)
+[health Script](Assets/Scripts/Hearts.cs)
+[anim Script](Assets/Scripts/triggerAnim.cs)
+![](shootBack.gif)
