@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 7731981280872058839}
   - component: {fileID: 5541772638816261784}
   - component: {fileID: 9040308150183423955}
+  - component: {fileID: 1110834291371792078}
+  - component: {fileID: 8586023182878058988}
+  - component: {fileID: 1165637712311801382}
   m_Layer: 0
   m_Name: Enemey
   m_TagString: Enemy
@@ -219,6 +222,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Player
   effect: {fileID: 7454581094206357161, guid: fbdfecdad5914394fbc4c0542a23424e, type: 3}
+--- !u!114 &1110834291371792078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802061669066352749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9d1085c79c0b442994cefedd3e4366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootScript: {fileID: 0}
+  coolDownTime: 1
+  shotRange: 5
+  player: {fileID: 0}
+--- !u!114 &8586023182878058988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802061669066352749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e3c668ca18fb44a9c936ddc0b2aa99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: shoot
+  delay: 0
+  resetTime: 2
+  triggerKey: 0
+  animator: {fileID: 0}
+--- !u!114 &1165637712311801382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802061669066352749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1d53f853ae7a842ab79149a3dc4e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootKey: 0
+  delay: 0.45
+  bulletPrefab: {fileID: 0}
 --- !u!1 &2548981255875145474
 GameObject:
   m_ObjectHideFlags: 0

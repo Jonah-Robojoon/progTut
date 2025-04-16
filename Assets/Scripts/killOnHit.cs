@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using static UnityEngine.GraphicsBuffer;
 
 public class killOnHit : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class killOnHit : MonoBehaviour
     public string targetTag;
     public GameObject effect;
     private AudioSource audioSource;
+    private Hearts heartsScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,29 +19,50 @@ public class killOnHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void OnCollisionEnter(Collision coll)
     {
-        if (coll.gameObject.tag == targetTag)
-        {
-            GameObject expl = Instantiate(effect);
-            expl.transform.position = gameObject.transform.position;
-            Destroy(expl, 1.7f);
-            Destroy(coll.gameObject, 0.1f);
-            audioSource.Play();
-        }
+        handleHit(coll.gameObject);
+
     }
     private void OnTriggerEnter(Collider coll)
     {
-        if (coll.gameObject.tag == targetTag)
+        handleHit(coll.gameObject);
+    }
+    private void handleHit(GameObject other)
+    {
+        if (other.tag == targetTag)
         {
             GameObject expl = Instantiate(effect);
-            expl.transform.position = gameObject.transform.position;
-            Destroy(expl, 1.7f);
-            Destroy(coll.gameObject, 0.1f);
-            audioSource.Play();
+            expl.transform.position = other.transform.position;
+            Destroy(expl, 2f);
+            if (targetTag == "Player")
+            {
+                Destroy(gameObject);
+                if (heartsScript == null)
+                {
+                    heartsScript = FindFirstObjectByType<Hearts>();
+
+                    Debug.Log(heartsScript);
+                }
+
+                Debug.Log(heartsScript.Lives + "lives left");
+                heartsScript.Lives--;
+                Debug.Log(heartsScript.Lives + "lives left");
+                if (heartsScript.Lives == 0)
+                {
+                    Destroy(other, 0.1f);
+                }
+            }
+            else
+            {
+                Destroy(other, 0.1f);
+            }
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
         }
     }
 }
